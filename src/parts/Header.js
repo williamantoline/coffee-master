@@ -1,13 +1,14 @@
 import React from "react";
 
 import Button from "../components/Button";
+import Logo from "../components/Logo";
 
 export default function Header(props) {
   return (
     <header className="container-fluid shadow">
       <div className="row">
         <div className="col-lg-3 left">
-          <p className="logo">COFFEE MASTER</p>
+          <Logo />
         </div>
         <div className="col-lg-3 menu">
           <a href="#products">

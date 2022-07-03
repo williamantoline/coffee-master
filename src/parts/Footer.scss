@@ -1,0 +1,57 @@
+@import "../main.scss";
+
+.footer {
+  height: 294px;
+  background-color: $tertiary;
+  color: $white;
+  text-align: left;
+  padding-top: 48px !important;
+  padding-bottom: 36px !important;
+
+  .logo {
+    color: $white;
+  }
+
+  .row {
+    .col-4 {
+    }
+  }
+
+  .footer-social-media-group {
+    margin-top: 12px;
+    a {
+      margin-right: 14px;
+    }
+  }
+
+  .footer-description {
+    width: 240px;
+    margin-top: 20px;
+  }
+
+  .footer-menu-group {
+    a {
+      color: $white;
+
+      div {
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  .footer-text-card {
+    margin-bottom: 24px;
+
+    .title {
+      margin-bottom: 4px;
+    }
+
+    .description {
+      margin-bottom: 2px;
+    }
+  }
+
+  .copyright {
+    margin-top: 32px;
+  }
+}

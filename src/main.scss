@@ -20,8 +20,30 @@ a {
     text-decoration: underline;
   }
 }
+
+.c-white {
+  color: $white;
+}
+
+.logo {
+  font-family: "Chakra Petch";
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.logo-light {
+  color: $white;
+}
+
 ._btn {
   border: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+._btn-auth {
+  width: 360px;
+  height: 44px;
+  border-radius: 10px;
   font-size: 16px;
   font-weight: 600;
 }

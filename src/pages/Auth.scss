@@ -1,0 +1,69 @@
+@import "../main.scss";
+
+.container-fluid {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: $light;
+  height: 100vh;
+}
+
+.auth-card {
+  padding: 0;
+  margin: 0;
+  background-color: $white;
+  width: 1200px;
+  height: 768px;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+
+  .left {
+    padding-left: 84px;
+    width: 50%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    p {
+      margin-bottom: 36px;
+    }
+  }
+
+  .right {
+    width: 50%;
+    img {
+      width: 100%;
+      height: 768px;
+    }
+  }
+
+  .auth-form-input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+
+    label {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 360px;
+      height: 44px;
+      border: 1px solid #bebebe;
+      border-radius: 10px;
+    }
+  }
+
+  .another-option {
+    margin-top: 54px;
+
+    a {
+      color: #3347ff;
+      text-decoration: underline;
+    }
+  }
+}

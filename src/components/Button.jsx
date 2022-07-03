@@ -7,7 +7,8 @@ export default function Button(props) {
   if (props.isLarge) classNames.push("_btn-lg");
   if (props.isPrimary) classNames.push("_btn-primary");
   if (props.isSecondary) classNames.push("_btn-secondary");
-  if (props.isTertiary) classNames.push("_btn-tertiary");
+  if (props.isTertiary) classNames.push("_btn-tertiary c-white");
+  if (props.type === "auth") classNames.push("_btn-auth");
 
   if (props.hasShadow) classNames.push("shadow");
 
@@ -26,6 +27,19 @@ export default function Button(props) {
     return (
       <>
         <button className={classNames.join(" ")}>
+          <img src={props.icon} />
+          {props.text}
+        </button>
+      </>
+    );
+  } else if (props.type === "auth") {
+    return (
+      <>
+        <button
+          style={{ marginTop: "48px" }}
+          type="submit"
+          className={classNames.join(" ")}
+        >
           <img src={props.icon} />
           {props.text}
         </button>

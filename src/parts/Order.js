@@ -2,7 +2,7 @@ import React from "react";
 
 import Button from "../components/Button";
 
-export default function Hero(props) {
+export default function Order(props) {
   return (
     <section className="container-fluid hero">
       <div className="row">
