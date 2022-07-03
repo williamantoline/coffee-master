@@ -1,0 +1,44 @@
+@import "../main.scss";
+
+.hero {
+  height: 840px;
+  background-color: $light;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .row {
+    .col-6 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      align-content: flex-start;
+
+      .hero-title {
+        font-family: "Raleway";
+        width: 414px;
+        text-align: left;
+      }
+
+      .hero-desc {
+        margin-top: 28px;
+        margin-bottom: 60px;
+        width: 560px;
+        line-height: 140%;
+        text-align: left;
+      }
+    }
+
+    .right {
+      img {
+        width: 770px;
+      }
+    }
+  }
+}
