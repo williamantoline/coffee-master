@@ -22,29 +22,6 @@ export default function Hero(props) {
             isLarge
             isSecondary
           />
-
-          <input
-            type="radio"
-            class="btn-check"
-            name="options-outlined"
-            id="success-outlined"
-            autocomplete="off"
-            checked
-          />
-          <label class="btn btn-outline-success" for="success-outlined">
-            Checked success radio
-          </label>
-
-          <input
-            type="radio"
-            class="btn-check"
-            name="options-outlined"
-            id="danger-outlined"
-            autocomplete="off"
-          />
-          <label class="btn btn-outline-danger" for="danger-outlined">
-            Danger radio
-          </label>
         </div>
         <div className="col-6 right">
           <img src="assets/images/hero.png" />

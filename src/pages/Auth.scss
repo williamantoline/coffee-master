@@ -1,12 +1,14 @@
 @import "../main.scss";
 
-.container-fluid {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  background-color: $light;
-  height: 100vh;
+.auth {
+  .container-fluid {
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: $light;
+  }
 }
 
 .auth-card {

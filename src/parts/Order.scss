@@ -1,0 +1,35 @@
+@import "../main.scss";
+
+.stores {
+  height: 840px;
+  background-color: $light;
+
+  .withImage {
+    img {
+      width: 362px;
+    }
+  }
+
+  .row {
+    h1 {
+      text-align: left;
+      margin-top: 45px;
+      margin-bottom: 36px;
+    }
+    .col-3 {
+      text-align: left;
+
+      .stores-region {
+        .stores-region-name {
+          margin-bottom: 20px;
+        }
+
+        .stores-region-place p {
+          width: 300px;
+          line-height: 130%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

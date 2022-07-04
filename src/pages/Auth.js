@@ -62,13 +62,15 @@ export default class Auth extends Component {
 
     return (
       <>
-        <div className="container-fluid">
-          <div className="auth-card shadow">
-            <div className="left">
-              <div className="auth-content"></div>
-            </div>
-            <div className="right">
-              <img src="assets/images/auth.jpg" />
+        <div className="auth">
+          <div className="container-fluid">
+            <div className="auth-card shadow">
+              <div className="left">
+                <div className="auth-content"></div>
+              </div>
+              <div className="right">
+                <img src="assets/images/auth.jpg" />
+              </div>
             </div>
           </div>
         </div>
