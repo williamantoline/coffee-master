@@ -1,0 +1,46 @@
+{
+  "menu": [
+    {
+      "name": "Nasi Goreng Spesial",
+      "price": "IDR 34000",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "image": "",
+      "code": "N1"
+    },
+    {
+      "name": "Nasi Goreng Pattaya",
+      "price": "IDR 32000",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "image": "",
+      "code": "N2"
+    },
+    {
+      "name": "Nasi Goreng Telur",
+      "price": "IDR 28000",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "image": "",
+      "code": "N3"
+    },
+    {
+      "name": "Indomie Goreng Spesial",
+      "price": "IDR 28000",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "image": "",
+      "code": "N4"
+    },
+    {
+      "name": "Indomie Goreng Pattaya",
+      "price": "IDR 26000",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "image": "",
+      "code": "N5"
+    },
+    {
+      "name": "Indomie Goreng Telur",
+      "price": "IDR 25000",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "image": "",
+      "code": "N6"
+    }
+  ]
+}

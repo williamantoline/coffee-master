@@ -1,0 +1,25 @@
+{
+  "stores": [
+    {
+      "name": "Coffee Master Sumatera",
+      "address": "Jl. Sumatra no. 5",
+      "city": "Medan",
+      "province": "Sumatera Utara",
+      "image": ""
+    },
+    {
+      "name": "Coffee Master Sudirman",
+      "address": "Jl. Sumatra no. 5",
+      "city": "Medan",
+      "province": "Sumatera Utara",
+      "image": ""
+    },
+    {
+      "name": "Coffee Master Garuda",
+      "address": "Jl. Sumatra no. 5",
+      "city": "Medan",
+      "province": "Sumatera Utara",
+      "image": ""
+    }
+  ]
+}

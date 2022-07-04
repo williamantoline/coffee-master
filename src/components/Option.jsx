@@ -5,8 +5,19 @@ export default function Option(props) {
 
   return (
     <>
-      <input type="radio" class="btn-check" name={props.name} id={props.id} />
-      <label class="btn btn-outline-success" for={props.id}>
+      <input
+        type="radio"
+        class="btn-check"
+        name={props.name}
+        id={props.id}
+        onChange={props.onChange}
+      />
+      <label
+        class="_btn _btn-sm _btn-primary btn btn-outline-success"
+        for={props.id}
+        defaultChecked={props.defaultChecked}
+        style={{ marginRight: "16px" }}
+      >
         {props.label}
       </label>
     </>

@@ -47,6 +47,11 @@ a {
   font-size: 16px;
   font-weight: 600;
 }
+._btn_sm {
+  width: 138px;
+  padding: 0 42px;
+  height: 40px;
+}
 ._btn-md {
   height: 48px;
   padding: 0 56px;
@@ -73,4 +78,12 @@ a {
 }
 ._btn-tertiary {
   background-color: $tertiary;
+}
+
+.cl-grey {
+  color: $grey;
+}
+.accordion-button:not(.collapsed) {
+  background-color: $secondary;
+  color: $tertiary;
 }

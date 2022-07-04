@@ -1,0 +1,31 @@
+@import "../main.scss";
+
+.tutorial {
+  text-align: left;
+
+  h1 {
+    margin-top: 45px;
+    margin-bottom: 36px;
+  }
+
+  .row {
+    margin-bottom: 48px;
+
+    .col-6 {
+    }
+
+    .tutorial-part {
+      width: 400px;
+      margin-bottom: 40px;
+      h2 {
+      }
+
+      p {
+      }
+    }
+
+    .desc {
+      padding-left: 28px;
+    }
+  }
+}

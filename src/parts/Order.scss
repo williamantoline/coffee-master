@@ -1,35 +1,71 @@
 @import "../main.scss";
 
-.stores {
-  height: 840px;
-  background-color: $light;
-
-  .withImage {
-    img {
-      width: 362px;
-    }
+.order {
+  h1 {
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 40px;
   }
-
   .row {
-    h1 {
+    h2 {
       text-align: left;
-      margin-top: 45px;
-      margin-bottom: 36px;
     }
-    .col-3 {
-      text-align: left;
 
-      .stores-region {
-        .stores-region-name {
-          margin-bottom: 20px;
-        }
+    .store-option {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
-        .stores-region-place p {
-          width: 300px;
-          line-height: 130%;
-          margin-bottom: 20px;
-        }
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      select {
+        margin-left: 14px;
+        font-size: 16px;
+        font-weight: 500;
       }
     }
   }
+
+  .options {
+    margin-top: 12px;
+
+    .option-menu {
+      text-align: left;
+    }
+
+    .option-type {
+      text-align: right;
+    }
+  }
+
+  .product-catalogue {
+    margin-top: 12px;
+    // max-width: 300%;
+
+    .scrollable {
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: row;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .scrollable-content {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  h3 {
+    text-align: left;
+    margin-top: 32px;
+  }
+  height: 840px;
 }

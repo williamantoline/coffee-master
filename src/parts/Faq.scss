@@ -1,0 +1,22 @@
+@import "../main.scss";
+
+.faq {
+  background-color: $light;
+  text-align: left;
+
+  h1 {
+    margin-top: 48px;
+    margin-bottom: 40px;
+  }
+
+  .row {
+    padding-bottom: 48px;
+
+    .col-6 {
+    }
+
+    .tutorial-part {
+      width: 400px;
+    }
+  }
+}

@@ -5,14 +5,16 @@
   background-color: $tertiary;
   color: $white;
   text-align: left;
-  padding-top: 48px !important;
   padding-bottom: 36px !important;
+  // padding-top: 48px !important;
 
   .logo {
     color: $white;
   }
 
   .row {
+    padding-top: 48px;
+    // padding-bottom: 48px;
     .col-4 {
     }
   }
@@ -47,6 +49,7 @@
     }
 
     .description {
+      width: 250px;
       margin-bottom: 2px;
     }
   }

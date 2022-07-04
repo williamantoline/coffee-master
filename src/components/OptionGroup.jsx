@@ -5,13 +5,14 @@ import Option from "./Option";
 export default function OptionGroup(props) {
   const classNames = [];
 
+  const options = props.options.map();
+
   return (
     <>
       <div className="product-categories">
-        <Option id="option-bread" name={props.name} label="Breads" />
-        <Option id="option-coffee" name={props.name} label="Coffee" />
-        <Option id="option-beverage" name={props.name} label="Beverage" />
-        <Option id="option-food" name={props.name} label="Food" />
+        {props.options.map((i, key) => {
+          <Option id="option-bread" name={props.name} label="Breads" />;
+        })}
       </div>
     </>
   );

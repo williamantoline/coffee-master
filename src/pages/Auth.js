@@ -4,7 +4,7 @@ import Button from "../components/Button";
 
 export default class Auth extends Component {
   constructor(props) {
-    this.props = props;
+    super(props);
   }
 
   render() {
@@ -66,7 +66,9 @@ export default class Auth extends Component {
           <div className="container-fluid">
             <div className="auth-card shadow">
               <div className="left">
-                <div className="auth-content"></div>
+                <div className="auth-content">
+                  {this.props.type === "login" ? loginPart : signupPart}
+                </div>
               </div>
               <div className="right">
                 <img src="assets/images/auth.jpg" />
