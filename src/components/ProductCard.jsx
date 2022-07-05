@@ -9,20 +9,24 @@ export default function ProductCard(props) {
     setQty(e.target.value);
   };
 
+  // let addBtn = document.getElementById("addBtn" + props.data.code);
+  // let subBtn = document.getElementById("subBtn" + props.data.code);
   let qtyInput = document.getElementById(props.data.code);
 
   const handleAddQty = () => {
-    let newQty = qty + 1;
+    let newQty = Math.max(qty + 1, 0);
     setQty(newQty);
+    props.setMenuQty([newQty, props.data.code]);
     qtyInput.value = newQty;
-    console.log(newQty);
+    // console.log(newQty);
   };
 
   const handleSubQty = () => {
-    let newQty = qty - 1;
+    let newQty = Math.max(qty - 1, 0);
     setQty(newQty);
+    props.setMenuQty([newQty, props.data.code]);
     qtyInput.value = newQty;
-    console.log(newQty);
+    // console.log(newQty);
   };
 
   // qtyInput.value = qty;
@@ -30,7 +34,9 @@ export default function ProductCard(props) {
     <>
       <div class="card" style={{ width: "280px", height: "420px" }}>
         <img
-          src="/assets/images/product-1.png"
+          src={
+            props.data.image ? props.data.image : "/assets/images/product-1.png"
+          }
           class="card-img-top"
           alt="..."
           style={{ height: "260px" }}
@@ -47,7 +53,12 @@ export default function ProductCard(props) {
             <div className="right">
               <div className="counter">
                 <div class="input-group mb-3">
-                  <button class="btn" type="button" onClick={handleAddQty}>
+                  <button
+                    class="btn"
+                    type="button"
+                    onClick={handleAddQty}
+                    id={`addBtn${props.data.code}`}
+                  >
                     +
                   </button>
                   <input
@@ -60,7 +71,12 @@ export default function ProductCard(props) {
                     value={qty}
                     onChange={handleChangeQty}
                   />
-                  <button class="btn btn" type="button" onClick={handleSubQty}>
+                  <button
+                    class="btn btn"
+                    type="button"
+                    onClick={handleSubQty}
+                    id={`subBtn${props.data.code}`}
+                  >
                     -
                   </button>
                 </div>

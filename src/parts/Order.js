@@ -9,21 +9,72 @@ import storesData from "../data/stores.json";
 import menuData from "../data/menu.json";
 
 export default function Order(props) {
-  let [menuOption, setMenuOption] = useState("a");
+  const stores = storesData.stores;
+
+  const setMenuQtys = (e) => {
+    let sum = 0;
+    let newData = menuQty;
+    for (let i = 0; i < menuQty.length; i++) {
+      if (menuQty[i].code === e[1]) {
+        newData[i].qty = e[0];
+      }
+      sum += newData[i].qty;
+    }
+    console.log(sum);
+    props.setCartItem(sum);
+    return newData;
+  };
+
+  const updateMenuQty = (code) => {
+    const newState = menuQty.map((obj) => {
+      if (obj.code === code) {
+        return { ...obj, qty: this };
+      }
+      return obj;
+    });
+
+    return newState;
+  };
+
+  let [menuOption, setMenuOption] = useState("food");
   let [menuType, setMenuType] = useState("dine-in");
   let [store, setStore] = useState(storesData.stores[0].name);
 
-  let [menu, setMenu] = useState(menuData.menu);
+  let rawMenu = menuData.menu;
 
-  const stores = storesData.stores;
+  const filterMenu = (category) => {
+    let filteredMenu = [];
+
+    for (let i = 0; i < rawMenu.length; i++) {
+      if (rawMenu[i].category === category) {
+        filteredMenu.push(rawMenu[i]);
+      }
+    }
+
+    return filteredMenu;
+  };
+
+  let [menu, setMenu] = useState(filterMenu("food"));
+
+  let initMenuData = [];
+
+  for (let i = 0; i < menu.length; i++) {
+    initMenuData.push({ code: menu[i].code, qty: 0 });
+  }
+
+  let [menuQty, setMenuQty] = useState(initMenuData);
 
   const handleChangeStore = (e) => {
     setStore(e.target.value);
   };
 
   const handleChangeMenu = (e) => {
-    console.log(e.target.id);
     setMenuOption(e.target.id);
+    setMenu(filterMenu(e.target.id));
+  };
+
+  const handleMenuChange = (e) => {
+    console.log(e);
   };
 
   return (
@@ -55,28 +106,28 @@ export default function Order(props) {
       </div>
       <div className="row options">
         <div className="col-4">
-          <div className="option-menu">
+          <div className="menu">
             <Option
-              id="option-bread"
+              id="bread"
               name="option"
               label="Breads"
               onChange={handleChangeMenu}
               defaultChecked
             />
             <Option
-              id="option-coffee"
+              id="coffee"
               name="option"
               label="Coffee"
               onChange={handleChangeMenu}
             />
             <Option
-              id="option-beverage"
+              id="beverage"
               name="option"
               label="Beverage"
               onChange={handleChangeMenu}
             />
             <Option
-              id="option-food"
+              id="food"
               name="option"
               label="Food"
               onChange={handleChangeMenu}
@@ -101,7 +152,7 @@ export default function Order(props) {
         <div className="col scrollable">
           <div className="scrollable-content">
             {menu.map((item) => {
-              return <ProductCard data={item} />;
+              return <ProductCard data={item} setMenuQty={setMenuQtys} />;
             })}
           </div>
         </div>

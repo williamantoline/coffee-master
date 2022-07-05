@@ -7,15 +7,15 @@ export default function Option(props) {
     <>
       <input
         type="radio"
-        class="btn-check"
+        class="btn-check _btn-select"
         name={props.name}
         id={props.id}
+        defaultChecked={props.defaultChecked}
         onChange={props.onChange}
       />
       <label
-        class="_btn _btn-sm _btn-primary btn btn-outline-success"
+        class="_btn _btn-sm _btn-primary btn btn-outline-success _btn-select"
         for={props.id}
-        defaultChecked={props.defaultChecked}
         style={{ marginRight: "16px" }}
       >
         {props.label}

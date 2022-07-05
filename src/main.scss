@@ -87,3 +87,13 @@ a {
   background-color: $secondary;
   color: $tertiary;
 }
+
+._btn-select {
+  border-radius: 40px;
+  background-color: $white;
+  border: 2px solid $secondary;
+
+  &:active {
+    background-color: $secondary;
+  }
+}

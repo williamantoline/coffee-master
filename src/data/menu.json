@@ -4,43 +4,65 @@
       "name": "Nasi Goreng Spesial",
       "price": "IDR 34000",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      "image": "",
-      "code": "N1"
+      "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1637&q=80",
+      "code": "F1",
+      "category": "food"
     },
     {
       "name": "Nasi Goreng Pattaya",
       "price": "IDR 32000",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      "image": "",
-      "code": "N2"
+      "image": "a",
+      "code": "F2",
+      "category": "food"
     },
     {
       "name": "Nasi Goreng Telur",
       "price": "IDR 28000",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
       "image": "",
-      "code": "N3"
+      "code": "F3",
+      "category": "food"
     },
     {
       "name": "Indomie Goreng Spesial",
       "price": "IDR 28000",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
       "image": "",
-      "code": "N4"
+      "code": "F4",
+      "category": "food"
     },
     {
       "name": "Indomie Goreng Pattaya",
       "price": "IDR 26000",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
       "image": "",
-      "code": "N5"
+      "code": "F5",
+      "category": "food"
     },
     {
-      "name": "Indomie Goreng Telur",
-      "price": "IDR 25000",
+      "name": "Chocolate",
+      "price": "IDR 20000",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
       "image": "",
-      "code": "N6"
+      "code": "D1",
+      "category": "beverage"
+    },
+    {
+      "name": "Chia Seed Lemon Tea",
+      "price": "IDR 20000",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "image": "",
+      "code": "D2",
+      "category": "beverage"
+    },
+    {
+      "name": "Mango Float",
+      "price": "IDR 18000",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "image": "",
+      "code": "D3",
+      "category": "beverage"
     }
   ]
 }

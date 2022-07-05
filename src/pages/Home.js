@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 
 import Header from "../parts/Header";
 import Hero from "../parts/Hero";
@@ -7,23 +7,25 @@ import Tutorial from "../parts/Tutorial";
 import Footer from "../parts/Footer";
 import Order from "../parts/Order";
 import Faq from "../parts/Faq";
+import Modal from "../parts/Modal";
 
-export default class Home extends Component {
-  constructor(props) {
-    super(props);
-  }
+export default function Home(props) {
+  let [cartItem, setCartItem] = useState(0);
 
-  render() {
-    return (
-      <>
-        <Header></Header>
-        <Hero></Hero>
-        <Order></Order>
-        <Stores></Stores>
-        <Tutorial></Tutorial>
-        <Faq></Faq>
-        <Footer></Footer>
-      </>
-    );
-  }
+  const setCartItems = (e) => {
+    setCartItem(e);
+  };
+
+  return (
+    <>
+      <Header cartItem={cartItem}></Header>
+      <Hero></Hero>
+      <Order setCartItem={setCartItems}></Order>
+      <Stores></Stores>
+      <Tutorial></Tutorial>
+      <Faq></Faq>
+      <Modal></Modal>
+      <Footer></Footer>
+    </>
+  );
 }
