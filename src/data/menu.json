@@ -4,7 +4,7 @@
       "name": "Nasi Goreng Spesial",
       "price": "IDR 34000",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1637&q=80",
+      "image": "",
       "code": "F1",
       "category": "food"
     },
@@ -12,7 +12,7 @@
       "name": "Nasi Goreng Pattaya",
       "price": "IDR 32000",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      "image": "a",
+      "image": "",
       "code": "F2",
       "category": "food"
     },
