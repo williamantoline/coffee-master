@@ -45,7 +45,7 @@ export default function Faq(props) {
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseTwo"
                 >
-                  Accordion Item #2
+                  How can I order the products?
                 </button>
               </h2>
               <div
@@ -54,15 +54,19 @@ export default function Faq(props) {
                 aria-labelledby="panelsStayOpen-headingTwo"
               >
                 <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the{" "}
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  <strong>There are 2 ways. Dine In and Take Away</strong>
+                  If you want to came and sit in the restaurant without spending
+                  extra time onsite choosing the menu, you can book a
+                  reservation and make a preorder for the dish. If you want to
+                  eat it somewhere else, choose take away and you can take it by
+                  yourself, or choosing a delivery to deliver it to you. For
+                  detail, please check the{" "}
+                  <a
+                    style={{ color: "blue", textDecoration: "underline" }}
+                    href="#tutorial"
+                  >
+                    tutorial section
+                  </a>
                 </div>
               </div>
             </div>
@@ -76,7 +80,8 @@ export default function Faq(props) {
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseThree"
                 >
-                  Accordion Item #3
+                  How can I get the newest information about new stores, new
+                  menu, offers, and etc.?
                 </button>
               </h2>
               <div
@@ -85,15 +90,9 @@ export default function Faq(props) {
                 aria-labelledby="panelsStayOpen-headingThree"
               >
                 <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the{" "}
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  <strong>Subscribe to our email</strong>
+                  By creating an account, you will be notified information about
+                  us. You can cancel it anytime.
                 </div>
               </div>
             </div>
