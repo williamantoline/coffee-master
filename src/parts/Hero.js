@@ -14,7 +14,8 @@ export default function Hero(props) {
             ad minim veniam
           </p>
           <Button
-            type="button"
+            type="link"
+            href="#order"
             text="Order Now"
             hasIcon
             icon="assets/icons/ic_cart.svg"

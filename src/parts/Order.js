@@ -14,13 +14,25 @@ export default function Order(props) {
   const setMenuQtys = (e) => {
     let sum = 0;
     let newData = menuQty;
+    let newBillItem = {};
+    let bill = [];
+
     for (let i = 0; i < menuQty.length; i++) {
+      if (menuQty[i].qty > 0) {
+        newBillItem.name = menuQty[i].name;
+        newBillItem.qty = e[0];
+        newBillItem.price = menuQty[i].price;
+        newBillItem.subtotal = menuQty[i].price * e[0];
+        bill.push(newBillItem);
+      }
+
       if (menuQty[i].code === e[1]) {
         newData[i].qty = e[0];
       }
       sum += newData[i].qty;
     }
-    console.log(sum);
+    console.log(bill);
+    props.setBill(bill);
     props.setCartItem(sum);
     return newData;
   };
@@ -36,11 +48,14 @@ export default function Order(props) {
     return newState;
   };
 
-  let [menuOption, setMenuOption] = useState("food");
+  let [menuOptionTagline, setMenuOptionTagline] = useState(
+    "Fresh from the oven"
+  );
   let [menuType, setMenuType] = useState("dine-in");
   let [store, setStore] = useState(storesData.stores[0].name);
 
   let rawMenu = menuData.menu;
+  let [menuOption, setMenuOption] = useState("food");
 
   const filterMenu = (category) => {
     let filteredMenu = [];
@@ -54,15 +69,22 @@ export default function Order(props) {
     return filteredMenu;
   };
 
-  let [menu, setMenu] = useState(filterMenu("food"));
-
   let initMenuData = [];
 
-  for (let i = 0; i < menu.length; i++) {
-    initMenuData.push({ code: menu[i].code, qty: 0 });
+  let [menu, setMenu] = useState(rawMenu);
+
+  for (let i = 0; i < rawMenu.length; i++) {
+    initMenuData.push({
+      code: rawMenu[i].code,
+      name: rawMenu[i].name,
+      price: rawMenu[i].price,
+      qty: 0,
+    });
   }
 
   let [menuQty, setMenuQty] = useState(initMenuData);
+  let [menuCount, setMenuCount] = useState(menu.length);
+  // let [bill, setBill] = useState([]);
 
   const handleChangeStore = (e) => {
     setStore(e.target.value);
@@ -70,12 +92,17 @@ export default function Order(props) {
 
   const handleChangeMenu = (e) => {
     setMenuOption(e.target.id);
-    setMenu(filterMenu(e.target.id));
+
+    let menuCountRaw = 0;
+    for (let i = 0; i < menu.length; i++) {
+      if (menu[i].category == e.target.id) {
+        menuCountRaw++;
+      }
+    }
+    setMenuCount(menuCountRaw);
   };
 
-  const handleMenuChange = (e) => {
-    console.log(e);
-  };
+  const handleMenuChange = (e) => {};
 
   return (
     <section className="container-fluid order" id="order">
@@ -108,17 +135,11 @@ export default function Order(props) {
         <div className="col-4">
           <div className="menu">
             <Option
-              id="bread"
+              id="food"
               name="option"
-              label="Breads"
+              label="Food"
               onChange={handleChangeMenu}
               defaultChecked
-            />
-            <Option
-              id="coffee"
-              name="option"
-              label="Coffee"
-              onChange={handleChangeMenu}
             />
             <Option
               id="beverage"
@@ -127,9 +148,15 @@ export default function Order(props) {
               onChange={handleChangeMenu}
             />
             <Option
-              id="food"
+              id="bread"
               name="option"
-              label="Food"
+              label="Bread"
+              onChange={handleChangeMenu}
+            />
+            <Option
+              id="coffee"
+              name="option"
+              label="Coffee"
               onChange={handleChangeMenu}
             />
           </div>
@@ -147,12 +174,29 @@ export default function Order(props) {
           </div>
         </div>
       </div>
-      <h3 className="fs-28 fw-500">Fresh from the oven</h3>
+      <h3 className="fs-28 fw-500">{menuOptionTagline}</h3>
       <div className="row product-catalogue">
         <div className="col scrollable">
           <div className="scrollable-content">
+            {menuCount === 0 ? (
+              <div className="center">
+                <img
+                  className="menu-not-found"
+                  src="assets/images/not-found.png"
+                ></img>
+                <p>Coming soon</p>
+              </div>
+            ) : (
+              ""
+            )}
             {menu.map((item) => {
-              return <ProductCard data={item} setMenuQty={setMenuQtys} />;
+              return (
+                <ProductCard
+                  data={item}
+                  setMenuQty={setMenuQtys}
+                  hidden={item.category === menuOption ? false : true}
+                />
+              );
             })}
           </div>
         </div>

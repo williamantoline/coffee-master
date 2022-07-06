@@ -1,0 +1,20 @@
+@import "../main.scss";
+
+.modal-content {
+}
+.modal {
+  .modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .total {
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .form {
+    text-align: left;
+  }
+}
